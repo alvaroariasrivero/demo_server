@@ -1,0 +1,25 @@
+{
+  "name": "demo_server",
+  "version": "1.0.0",
+  "description": "Proyecto en el que vamos trabajando el backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alvaroariasrivero/demo_server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alvaroariasrivero/demo_server/issues"
+  },
+  "homepage": "https://github.com/alvaroariasrivero/demo_server#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^3.0.2"
+  }
+}
