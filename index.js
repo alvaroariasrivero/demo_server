@@ -9,6 +9,15 @@ app.use(express.json()) //Habilitar envío de json al servidor
 app.set('view engine', 'pug');
 app.set('views','./views');
 
+function hasApiKey(req, res, next){
+
+}
+
+
+
+
+///////////////////////RUTAS///////////////////////////
+
 app.get('/', (req, res) => {
   res.send('Home de productos')
 })
@@ -24,6 +33,11 @@ app.post('/products', product.createProduct);
 app.get('/first_template', function(req, res){
     res.render('first_view');
  });
+
+//Capture all 404 errors
+app.use(function(req, res, next) {
+  res.status(404).render('error404')
+})
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
