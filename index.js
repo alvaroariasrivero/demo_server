@@ -35,6 +35,8 @@ app.use(function (req,res,next){
 	res.status(404).render('error',{data});
 });
 
-app.listen(port, () => {
+const server = app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
+
+module.exports = server;

@@ -4,7 +4,7 @@
   "description": "Proyecto en el que vamos trabajando el backend",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --detectOpenHandles",
     "start": "nodemon index.js"
   },
   "repository": {
@@ -19,10 +19,14 @@
   },
   "homepage": "https://github.com/alvaroariasrivero/demo_server#readme",
   "dependencies": {
-    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "mongoose": "^6.0.13",
     "node-fetch": "^2.6.6",
     "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "jest": "^27.3.1",
+    "supertest": "^6.1.6"
   }
 }
