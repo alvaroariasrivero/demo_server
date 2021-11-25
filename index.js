@@ -1,8 +1,9 @@
 const express = require('express')
+require('dotenv').config() // carga fichero variables de entorno
 const productRouter = require('./routes/product') 
 const productApiRouter = require('./routes/productApi')
+const entryApiRouter = require('./routes/entryApi')
 
-require('dotenv').config() // carga fichero variables de entorno
 require('./utils/dbmongocon') // Lanzo la base de datos de mongo
 
 const app = express()
@@ -25,6 +26,7 @@ app.use('/', productRouter)
 
 ////////////////////RUTAS PARA LA API///////////////////////////////////////////////////////
 app.use('/api', productApiRouter)
+app.use('/api', entryApiRouter)
 
 //Capture All 404 errors
 app.use(function (req,res,next){
